@@ -1,0 +1,54 @@
+ul.react-paginate {
+  margin: 80px 0 50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0 5rem;
+}
+
+ul.react-paginate li a {
+  border-radius: 7px;
+  padding: 0.1rem 1rem;
+  border: gray 1px solid;
+  cursor: pointer;
+}
+ul.react-paginate li.previous a,
+ul.react-paginate li.next a,
+ul.react-paginate li.break a {
+  border-color: transparent;
+  font-size: 20px;
+}
+ul.react-paginate li.selected a {
+  background-color: var(--primary);
+  border-color: transparent;
+  color: white;
+  min-width: 32px;
+}
+ul.react-paginate li.disabled a {
+  color: grey;
+}
+ul.react-paginate li.disable,
+ul.react-paginate li.disabled a {
+  cursor: default;
+}
+
+@media screen and (max-width: 1150px) {
+  .paginatedItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  ul.react-paginate {
+    padding: 0;
+    gap: 5px;
+  }
+  ul.react-paginate li a {
+    padding: 0.1rem 0.5rem;
+  }
+}

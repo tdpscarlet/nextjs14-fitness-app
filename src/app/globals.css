@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #000000;
+  --primary: #01739d;
+  --secondary: #ff852a;
+  --dark-blue: #015c7e;
+  --light-grey: rgb(249, 250, 251);
+  --grey: rgba(145, 158, 171, 0.1);
+  --Grid-columns: 12;
+  --Grid-columnSpacing: 24px;
+  --Grid-rowSpacing: 24px;
+}
+
+html,
+body,
+button {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.0025em;
+  font-weight: 500;
+}
+
+.wrapper {
+  max-width: 1137px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.active {
+  color: var(--primary);
+}
+
+button.active {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.calc-btn.active {
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.box-shadow {
+  box-shadow: rgba(145, 158, 171, 0.08) 0px 0px 2px 0px,
+    rgba(145, 158, 171, 0.08) 0px 12px 24px -4px;
+}
