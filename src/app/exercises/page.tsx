@@ -12,7 +12,7 @@ import {
 import PaginatedItems from "@/components/Exercises/PaginatedItems";
 import NavBar from "@/components/NavBar";
 
-const page = () => {
+const ExercisePage = () => {
   const dispatch = useDispatch<AppDispatch>();
   const search = useAppSelector<string>((state) => state.exercisesList.search);
   const exercises = useAppSelector<Exercise[]>(
@@ -80,7 +80,7 @@ const page = () => {
           </div>
         </div>
         {Object.keys(exercises).length === 0 ? (
-          <img src={rolling.src} alt="" />
+          <img src={rolling.src} alt="" loading="lazy" />
         ) : (
           <PaginatedItems />
         )}
@@ -89,4 +89,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ExercisePage;

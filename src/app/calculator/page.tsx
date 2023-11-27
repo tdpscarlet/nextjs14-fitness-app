@@ -11,7 +11,7 @@ import NavBar from "@/components/NavBar";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
-const page = () => {
+const CalculatorPage = () => {
   const [calcName, setCalcName] = useState("Calorie Calculator");
   const calcs = [
     "Calorie Calculator",
@@ -63,4 +63,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CalculatorPage;
