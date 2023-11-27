@@ -38,6 +38,7 @@ const HomeContent = () => {
               <img
                 src={yoga.src}
                 className="itemImg col-[3] row-[1_/_span_2]"
+                alt=""
               />
               <span className="itemDesc col-[1_/_span_3] row-[3]">
                 enjoy yoga for all level body elastic, body weight, and many
@@ -52,6 +53,7 @@ const HomeContent = () => {
               <img
                 src={fitness.src}
                 className="itemImg col-[3] row-[1_/_span_2]"
+                alt=""
               />
               <span className="itemDesc col-[1_/_span_3] row-[3]">
                 regular strength training improve the health of your bones and

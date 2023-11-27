@@ -109,8 +109,12 @@ const GoalEdit = (props: IProps) => {
             value={protein}
             onChange={(e) => setProtein(e.target.value as number)}
           >
-            {range.map((percent) => {
-              return <MenuItem value={percent}>{percent}%</MenuItem>;
+            {range.map((percent, index) => {
+              return (
+                <MenuItem key={index} value={percent}>
+                  {percent}%
+                </MenuItem>
+              );
             })}
           </Select>
         </div>
