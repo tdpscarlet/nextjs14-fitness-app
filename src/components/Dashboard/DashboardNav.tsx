@@ -18,6 +18,7 @@ const DashboardNav = async () => {
             <img
               className="w-full h-full object-cover"
               src={session?.user?.image as string}
+              alt=""
             />
           </div>
           <span>{session?.user?.name as string}</span>

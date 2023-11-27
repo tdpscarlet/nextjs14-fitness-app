@@ -43,7 +43,7 @@ const LogInForm = () => {
       router.refresh(); //Get a new session on the server side
       router.push("/protected/dashboard"); //Redirect to dashboard
     }
-  }, [status]);
+  }, [status, router]);
 
   return (
     <div className="flex flex-col items-start border rounded-lg p-7 gap-5 shadow-lg">
@@ -81,6 +81,7 @@ const LogInForm = () => {
         <img
           className="h-10 cursor-pointer"
           src={googleIcon.src}
+          alt=""
           onClick={() =>
             signIn("google", {
               callbackUrl: "/protected/dashboard",
@@ -90,6 +91,7 @@ const LogInForm = () => {
         <img
           className="h-10 cursor-pointer"
           src={facebookIcon.src}
+          alt=""
           onClick={() =>
             signIn("facebook", {
               callbackUrl: "/protected/dashboard",

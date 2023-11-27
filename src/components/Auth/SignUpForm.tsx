@@ -74,8 +74,8 @@ const SignUpForm = () => {
         <div className="border h-[1px] w-full"></div>
       </div>
       <div className="flex flex-row justify-center items-center w-full gap-3">
-        <img className="h-10 cursor-pointer" src={googleIcon.src} />
-        <img className="h-10 cursor-pointer" src={facebookIcon.src} />
+        <img className="h-10 cursor-pointer" src={googleIcon.src} alt="" />
+        <img className="h-10 cursor-pointer" src={facebookIcon.src} alt="" />
       </div>
       <span>{message}</span>
     </div>

@@ -20,6 +20,7 @@ const Header = async () => {
         <img
           className="w-full h-full object-cover"
           src={session?.user?.image as string}
+          alt=""
         />
       </div>
     </div>

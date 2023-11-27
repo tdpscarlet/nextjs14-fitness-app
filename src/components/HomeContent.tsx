@@ -68,6 +68,7 @@ const HomeContent = () => {
               <img
                 src={muscle.src}
                 className="itemImg col-[3] row-[1_/_span_2]"
+                alt=""
               />
               <span className="itemDesc col-[1_/_span_3] row-[3]">
                 enjoy all muscles exercise in every level, make your abs dream

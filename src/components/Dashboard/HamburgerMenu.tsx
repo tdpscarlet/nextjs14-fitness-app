@@ -14,7 +14,7 @@ interface IProps {
 const HamburgerMenu = ({ image, name }: IProps) => {
   return (
     <div className="lg:hidden">
-      <MenuRes customBurgerIcon={<img src={bars.src} />}>
+      <MenuRes customBurgerIcon={<img src={bars.src} alt="" />}>
         <div>
           <img className="w-28" src={logo.src} alt="" />
           <div className="flex flex-row items-center gap-4 px-5 py-4 bg-[rgba(145,158,171,0.12)] my-6 rounded-xl">

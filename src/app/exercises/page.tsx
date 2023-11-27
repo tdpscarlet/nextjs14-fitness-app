@@ -37,7 +37,7 @@ const ExercisePage = () => {
 
   useEffect(() => {
     dispatch(fetchAsyncExercises());
-  }, [fetchAsyncExercises, dispatch]);
+  }, [dispatch]);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(searchExercises(e.target.value));
