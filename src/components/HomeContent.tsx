@@ -4,7 +4,6 @@ import dumbbell from "@/assets/img/Dumbbell.png";
 import yoga from "@/assets/img/Yoga Skin Type 2.png";
 import fitness from "@/assets/img/Plank.png";
 import muscle from "@/assets/img/Rowing Machine.png";
-import { getServerSession } from "next-auth";
 
 const HomeContent = () => {
   return (
