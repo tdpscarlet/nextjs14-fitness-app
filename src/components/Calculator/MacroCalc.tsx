@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Macros from "./Macros";
+import "./calculators.css";
 
 const MacroCalc = () => {
   const [result, setResult] = useState<Result>();

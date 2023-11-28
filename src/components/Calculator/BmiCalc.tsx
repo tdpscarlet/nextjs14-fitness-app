@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
+import "./calculators.css";
 
 const BmiCalc = () => {
   const [result, setResult] = useState<Result>();

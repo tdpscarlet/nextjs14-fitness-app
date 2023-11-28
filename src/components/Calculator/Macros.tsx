@@ -1,3 +1,5 @@
+import "./calculators.css";
+
 interface IProps {
   data?: {
     protein?: number;

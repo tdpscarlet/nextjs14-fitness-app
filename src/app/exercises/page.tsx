@@ -50,7 +50,7 @@ const ExercisePage = () => {
   return (
     <>
       <NavBar />
-      <div className="exercises flex flex-col justify-center items-center">
+      <div className="exercises wrapper flex flex-col justify-center items-center">
         <div className="searchBar flex flex-col items-center gap-[50px] mt-10 mb-[30px]">
           <span className="text-[34px] leading-[44px] tracking-[0.0025em] font-bold text-[--primary]">
             <span className="text-[--secondary]">Looking</span> for exercises?

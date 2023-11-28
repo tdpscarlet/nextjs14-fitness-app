@@ -28,7 +28,7 @@ const CalculatorPage = () => {
   return (
     <>
       <NavBar />
-      <div className="calculator">
+      <div className="calculator wrapper">
         <div className="calc-category flex flex-row justify-evenly bg-[rgba(86,177,211,0.1)] mt-10 px-0 py-5">
           {calcs.map((calc, index) => (
             <button

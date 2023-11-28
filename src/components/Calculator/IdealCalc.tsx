@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import { useState } from "react";
+import "./calculators.css";
 
 const IdealCalc = () => {
   const [result, setResult] = useState<Result>();

@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import { useState } from "react";
+import "./calculators.css";
 
 const BodyFatCalc = () => {
   const [result, setResult] = useState<Result>();

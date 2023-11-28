@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
+import "./calculators.css";
 
 const CalorieCalc = () => {
   const [result, setResult] = useState<Result>();

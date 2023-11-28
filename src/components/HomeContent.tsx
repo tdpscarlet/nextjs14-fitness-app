@@ -8,7 +8,7 @@ import muscle from "@/assets/img/Rowing Machine.png";
 const HomeContent = () => {
   return (
     <div>
-      <div className="content flex flex-col justify-center items-center">
+      <div className="content flex flex-col justify-center items-center wrapper">
         <div className="offers flex items-center p-4">
           <div className="offersTitle grid text-2xl leading-[normal] grid-rows-[2em_1em_2em] grid-cols-[3em_2em_3em]">
             <span className="title1 col-[1_/_span_2] row-[1_/_span_2]">
