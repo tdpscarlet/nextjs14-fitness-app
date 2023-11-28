@@ -23,12 +23,15 @@ const Menu = () => {
           Exercise
         </div>
       </div>
-      <div className="hover:bg-[--grey] border-transparent rounded-md cursor-pointer px-4 py-2">
+      <Link
+        href="/protected/food"
+        className="hover:bg-[--grey] border-transparent rounded-md cursor-pointer px-4 py-2"
+      >
         <div className="opacity-70 flex gap-4 items-center">
           <img className="w-6 h-6" src={food.src} alt="" />
           Food
         </div>
-      </div>
+      </Link>
       <Link
         href="/protected/goal"
         className="hover:bg-[--grey] border-transparent rounded-md cursor-pointer px-4 py-2"
