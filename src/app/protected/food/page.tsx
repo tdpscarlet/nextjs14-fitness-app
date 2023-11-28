@@ -4,7 +4,7 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const page = () => {
+const FoodPage = () => {
   const [startDate, setStartDate] = useState(new Date());
   return (
     <div className="mx-16 lg:mx-48">
@@ -48,4 +48,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default FoodPage;
