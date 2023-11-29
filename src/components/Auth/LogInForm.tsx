@@ -2,7 +2,7 @@
 
 import { DM_Sans } from "next/font/google";
 import googleIcon from "@/assets/svg/google.svg";
-import facebookIcon from "@/assets/svg/facebook.svg";
+// import facebookIcon from "@/assets/svg/facebook.svg";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { signIn, useSession } from "next-auth/react";
@@ -15,8 +15,8 @@ const LogInForm = () => {
   const { status } = useSession();
   const router = useRouter();
 
-  const [open, setOpen] = useState(false);
-  const [err, setErr] = useState("");
+  const [open, setOpen] = useState<boolean>(false);
+  const [err, setErr] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -41,7 +41,7 @@ const LogInForm = () => {
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
       openToast("Please enter valid email");
     else if (password.length < 8 || password.length > 16)
-      openToast("*Password length must between 8 and 16");
+      openToast("Password length must between 8 and 16");
     else handleSubmit();
   };
 
@@ -119,7 +119,7 @@ const LogInForm = () => {
             })
           }
         />
-        <img
+        {/* <img
           className="h-10 cursor-pointer"
           src={facebookIcon.src}
           alt=""
@@ -128,7 +128,7 @@ const LogInForm = () => {
               callbackUrl: "/protected/dashboard",
             })
           }
-        />
+        /> */}
       </div>
       <span className="text-sm">
         Not a member?

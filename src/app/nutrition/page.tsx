@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import ImageInput from "@/components/Nutrition/ImageInput";
 import TextInput from "@/components/Nutrition/TextInput";
 import { useState } from "react";
+import "../../components/Calculator/calculators.css";
 
 const NutritionPage = () => {
   const [title, setTitle] = useState("Text Search");

@@ -12,7 +12,7 @@ const ProtectedLayout = async ({ children }: ProtectedLayoutProps) => {
   const session = await getServerSession(authOptions);
   if (!session || !session.user?.email) {
     return (
-      <div className="m-8 text-center">
+      <div className="m-8 text-center text-lg">
         You must log in to access dashboard!
         <Link href="/auth/login" className="text-[--primary]">
           {" "}

@@ -23,7 +23,7 @@ datasource db {
 
 model Day {
   id        String     @id @default(cuid())
-  exDay     DateTime   @default(now())
+  value     String
   createAt  DateTime   @default(now())
   updateAt  DateTime   @updatedAt
   userId    String     @unique
@@ -58,6 +58,8 @@ model Exercise {
   dayId     String
 
   day Day @relation(fields: [dayId], references: [id], onDelete: Cascade)
+
+  @@index([dayId])
 }
 
 model Food {
@@ -78,6 +80,8 @@ model Food {
   createAt    DateTime @default(now())
   updateAt    DateTime @updatedAt
   Day         Day      @relation(fields: [dayId], references: [id], onDelete: Cascade)
+
+  @@index([dayId])
 }
 
 model Goal {
@@ -108,6 +112,7 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  @@index([userId])
 }
 
 model Session {
@@ -116,6 +121,8 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 model User {
