@@ -11,6 +11,7 @@ import {
 } from "@/redux/features/exercisesSlice";
 import PaginatedItems from "@/components/Exercises/PaginatedItems";
 import NavBar from "@/components/NavBar";
+import HomeMenu from "@/components/HomeMenu";
 
 const ExercisePage = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -50,19 +51,20 @@ const ExercisePage = () => {
   return (
     <>
       <NavBar />
+      <HomeMenu />
       <div className="exercises wrapper flex flex-col justify-center items-center">
-        <div className="searchBar flex flex-col items-center gap-[50px] mt-10 mb-[30px]">
+        <div className="searchBar flex flex-col items-center gap-[50px] mt-20 lg:mt-10 mb-[30px]">
           <span className="text-[34px] leading-[44px] tracking-[0.0025em] font-bold text-[--primary]">
             <span className="text-[--secondary]">Looking</span> for exercises?
           </span>
           <input
-            className="w-[500px] h-[45px] border text-[inherit] font-[inherit] px-[30px] py-0 rounded-[40px] border-solid border-[black]"
+            className="md:w-[500px] w-80 h-[45px] border text-[inherit] font-[inherit] px-[30px] py-0 rounded-[40px] border-solid border-[black]"
             type="text"
             placeholder="Search"
             value={search}
             onChange={handleSearch}
           />
-          <div className="bodyParts flex gap-2.5">
+          <div className="bodyParts flex justify-center flex-wrap gap-2.5">
             {bodyTexts.map((bodyText: string, index: number) => (
               <button
                 className={

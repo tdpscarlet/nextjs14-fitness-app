@@ -10,25 +10,25 @@ const dmSans = DM_Sans({ subsets: ["latin"] });
 
 const Banner = () => {
   return (
-    <div className="banner flex flex-row items-center justify-center relative h-[700px]">
+    <div className="banner flex flex-row items-center justify-center relative mt-20 mb-10 mx-5 lg:mx-auto">
       <div className="banner-text flex flex-col w-[461px]">
         <span
-          className={`${concertOne.className} not-italic font-normal text-[50px] leading-[47px] tracking-[0.145em] z-[2] mb-6`}
+          className={`${concertOne.className} not-italic font-normal text-4xl lg:text-5xl leading-8 lg:leading-10 tracking-[0.145em] z-[2] mb-6`}
         >
           Change your
         </span>
         <span
-          className={`${concertOne.className} not-italic font-normal text-[50px] leading-[47px] tracking-[0.145em] z-[2] mb-6 text-[--primary]`}
+          className={`${concertOne.className} not-italic font-normal text-4xl lg:text-5xl leading-8 lg:leading-10 tracking-[0.145em] z-[2] mb-6 text-[--primary]`}
         >
           habits
         </span>
         <span
-          className={`${concertOne.className} not-italic font-normal text-[50px] leading-[47px] tracking-[0.145em] z-[2] mb-6`}
+          className={`${concertOne.className} not-italic font-normal text-4xl lg:text-5xl leading-8 lg:leading-10 tracking-[0.145em] z-[2] mb-6`}
         >
           Level up your
         </span>
         <span
-          className={`${concertOne.className} not-italic font-normal text-[50px] leading-[47px] tracking-[0.145em] z-[2] mb-6 text-[--secondary]`}
+          className={`${concertOne.className} not-italic font-normal text-4xl lg:text-5xl leading-8 lg:leading-10 tracking-[0.145em] z-[2] mb-6 text-[--secondary]`}
         >
           life quality
         </span>
@@ -46,7 +46,11 @@ const Banner = () => {
           Good Habbits good life
         </span>
       </div>
-      <img className="banner-image" src={banner.src} alt="banner" />
+      <img
+        className="banner-image hidden md:block md:w-96 lg:w-auto"
+        src={banner.src}
+        alt="banner"
+      />
     </div>
   );
 };

@@ -9,7 +9,7 @@ interface IProps {
 
 const ExercisesList = ({ currentItems }: IProps) => {
   return (
-    <div className="exercises-list grid grid-cols-[1fr_1fr_1fr] gap-5">
+    <div className="exercises-list flex flex-col mx-2 md:grid md:grid-cols-[1fr_1fr_1fr] gap-5">
       {currentItems?.map((exercise: Exercise, index: number) => (
         <ExerciseItem data={exercise} key={index} />
       ))}

@@ -8,6 +8,7 @@ import MacroCalc from "@/components/Calculator/MacroCalc";
 import React, { useState } from "react";
 import { DM_Sans } from "next/font/google";
 import NavBar from "@/components/NavBar";
+import HomeMenu from "@/components/HomeMenu";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -28,8 +29,9 @@ const CalculatorPage = () => {
   return (
     <>
       <NavBar />
-      <div className="calculator wrapper">
-        <div className="calc-category flex flex-row justify-evenly bg-[rgba(86,177,211,0.1)] mt-10 px-0 py-5">
+      <HomeMenu />
+      <div className="calculator wrapper mt-16">
+        <div className="flex gap-3 flex-col md:flex-row justify-evenly bg-[rgba(86,177,211,0.1)] px-0 py-5">
           {calcs.map((calc, index) => (
             <button
               className={
@@ -45,7 +47,7 @@ const CalculatorPage = () => {
             </button>
           ))}
         </div>
-        <div className="calc-detail">
+        <div className="calc-detail md:mx-4">
           {calcName === "Calorie Calculator" ? (
             <CalorieCalc />
           ) : calcName === "BMI Calculator" ? (

@@ -6,6 +6,7 @@ import { slide as MenuRes } from "react-burger-menu";
 import Menu from "./Menu";
 import logo from "@/assets/img/logo.png";
 import avatar from "@/assets/img/User-avatar.jpg";
+import "./hamburger.css";
 
 interface IProps {
   image: string;

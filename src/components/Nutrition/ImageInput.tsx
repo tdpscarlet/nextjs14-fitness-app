@@ -26,7 +26,7 @@ const ImageInput = () => {
   };
 
   return (
-    <div>
+    <div className="wrapper">
       <div className="textSearch">
         <span className="title">
           <span className="text-yellow">Image </span>
