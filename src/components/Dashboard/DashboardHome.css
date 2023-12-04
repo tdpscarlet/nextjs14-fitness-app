@@ -1,4 +1,5 @@
-.grid-wrap {
+.grid-wrap-4,
+.grid-wrap-2 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
@@ -6,7 +7,7 @@
 }
 
 @media (min-width: 768px) {
-  .grid-wrap {
+  .grid-wrap-4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
@@ -15,9 +16,16 @@
 }
 
 @media (min-width: 1024px) {
-  .grid-wrap {
+  .grid-wrap-4 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .grid-wrap-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1.5rem;
   }
