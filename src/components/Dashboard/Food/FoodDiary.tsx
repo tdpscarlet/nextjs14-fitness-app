@@ -41,11 +41,11 @@ const FoodDiary = () => {
     };
     fetchData();
 
-    console.log(food);
-    console.log(startDate);
-    console.log(isFirstTime);
-    console.log(dayValue);
-  }, [startDate, isFirstTime, food, flag]);
+    // console.log(food);
+    // console.log(startDate);
+    // console.log(isFirstTime);
+    // console.log(dayValue);
+  }, [startDate, isFirstTime, food, flag, dayValue]);
 
   return (
     <>

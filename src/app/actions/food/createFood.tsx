@@ -28,7 +28,7 @@ const createFood = async (
 
   let date = await prisma.day.findUnique({
     where: {
-      userId: user?.id,
+      userId: user?.id!,
       value,
     },
   });
