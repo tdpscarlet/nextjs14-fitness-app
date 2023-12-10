@@ -12,7 +12,7 @@ const getFood = async (value: string) => {
     },
   });
 
-  const date = await prisma.day.findUnique({
+  const date = await prisma.day.findFirst({
     where: {
       userId: user?.id,
       value,

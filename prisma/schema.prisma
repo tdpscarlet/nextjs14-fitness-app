@@ -26,11 +26,13 @@ model Day {
   value     String     @unique
   createAt  DateTime   @default(now())
   updateAt  DateTime   @updatedAt
-  userId    String     @unique
+  userId    String
   stat      Stat?
   exercises Exercise[]
   food      Food[]
   user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 model Stat {
