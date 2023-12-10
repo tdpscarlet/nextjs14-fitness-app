@@ -25,41 +25,40 @@ const createFood = async (
       email: session?.user?.email!,
     },
   });
-  if (user) {
-    let date = await prisma.day.findUnique({
-      where: {
-        userId: user?.id!,
-        value,
-      },
-    });
 
-    if (!date) {
-      date = await prisma.day.create({
-        data: {
-          value,
-          userId: user?.id!,
-        },
-      });
-    }
+  let date = await prisma.day.findUnique({
+    where: {
+      userId: user?.id,
+      value,
+    },
+  });
 
-    await prisma.food.create({
+  if (!date) {
+    date = await prisma.day.create({
       data: {
-        dayId: date?.id!,
-        name,
-        meal,
-        servingSize,
-        calo,
-        carb,
-        protein,
-        totalFat,
-        satFat,
-        sugar,
-        sodium,
-        fiber,
-        cholesterol,
+        value,
+        userId: user?.id!,
       },
     });
   }
+
+  await prisma.food.create({
+    data: {
+      dayId: date?.id!,
+      name,
+      meal,
+      servingSize,
+      calo,
+      carb,
+      protein,
+      totalFat,
+      satFat,
+      sugar,
+      sodium,
+      fiber,
+      cholesterol,
+    },
+  });
 };
 
 export default createFood;

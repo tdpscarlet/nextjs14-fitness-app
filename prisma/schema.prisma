@@ -23,16 +23,14 @@ datasource db {
 
 model Day {
   id        String     @id @default(cuid())
-  value     String
+  value     String     @unique
   createAt  DateTime   @default(now())
   updateAt  DateTime   @updatedAt
-  userId    String
+  userId    String     @unique
   stat      Stat?
   exercises Exercise[]
   food      Food[]
   user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId])
 }
 
 model Stat {
