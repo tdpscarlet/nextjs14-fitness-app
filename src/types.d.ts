@@ -97,3 +97,20 @@ interface FoodResult {
     sugar_g: number;
   }>;
 }
+
+interface Food {
+  id?: string;
+  dayId: string;
+  name: string;
+  meal: string;
+  servingSize: number;
+  calo?: number | null;
+  carb?: number | null;
+  protein?: number | null;
+  totalFat?: number | null;
+  satFat?: number | null;
+  sugar?: number | null;
+  sodium?: number | null;
+  fiber?: number | null;
+  cholesterol?: number | null;
+}

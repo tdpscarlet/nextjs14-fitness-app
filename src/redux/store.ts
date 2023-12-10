@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import ExercisesReducer from "./features/exercisesSlice";
 import { TypedUseSelectorHook, useSelector } from "react-redux";
+import DayReducer from "./features/daySlice";
 
 export const store = configureStore({
   reducer: {
     exercisesList: ExercisesReducer,
+    DayReducer,
   },
 });
 

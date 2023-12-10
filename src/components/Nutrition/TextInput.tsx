@@ -4,7 +4,7 @@ import Result from "./Result";
 import "./nutrition.css";
 
 const TextInput = () => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState<string>("");
   const [result, setResult] = useState<FoodResult>();
   const url = `https://api.calorieninjas.com/v1/nutrition?query=${query}`;
   const config = {
@@ -21,6 +21,7 @@ const TextInput = () => {
       console.log(err);
     }
   };
+
   return (
     <div className="wrapper">
       <div className="textSearch">

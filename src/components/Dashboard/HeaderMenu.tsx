@@ -34,7 +34,7 @@ const HeaderMenu = ({ email, name, image }: IProps) => {
         onClose={handleClose}
         BackdropProps={{ style: { backgroundColor: "transparent" } }}
       >
-        <div className="flex flex-col focus: outline-none absolute top-16 right-10 border-transparent rounded-xl shadow-lg bg-white">
+        <div className="flex flex-col focus:outline-none absolute top-16 right-10 border-transparent rounded-xl shadow-lg bg-white">
           <div className="flex flex-col px-5 py-4">
             <span className="text-sm font-semibold">{name}</span>
             <span className="text-sm text-gray-500">{email}</span>

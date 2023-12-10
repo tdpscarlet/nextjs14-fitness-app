@@ -7,6 +7,7 @@ const initialState: InitState = {
   bodyPart: "all",
   selected: {},
 };
+
 const config = {
   headers: {
     "X-RapidAPI-Key": "aba5ebbb43msh492ff23b5162573p1dfe59jsnf1f5d5668110",

@@ -63,7 +63,7 @@ const DashboardCharts = () => {
             ]}
             height={300}
           />
-          <div className="flex gap-2 items-center self-end">
+          <div className="flex gap-2 items-center self-end mt-2">
             <div className="w-3 h-3 bg-[#02d5d1] rounded-full"></div>
             <span className="text-sm text-gray-500">Carbohydrate</span>
             <div className="w-3 h-3 bg-[rgb(46,150,255)] rounded-full ml-3"></div>

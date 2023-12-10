@@ -1,11 +1,20 @@
+"use client";
+
 import gear from "@/assets/svg/gear-solid.svg";
 import food from "@/assets/svg/bowl-food-solid.svg";
 import exercise from "@/assets/svg/dumbbell-solid.svg";
 import goal from "@/assets/svg/bullseye-solid.svg";
 import chart from "@/assets/svg/chart-simple-solid.svg";
 import Link from "next/link";
+// import { useRouter } from "next/navigation";
 
 const Menu = () => {
+  // const router = useRouter();
+  // const today = new Date();
+  // const todayString = `${today.getDate()}-${
+  //   today.getMonth() + 1
+  // }-${today.getFullYear()}`;
+
   return (
     <div className="flex flex-col gap-2 text-sm">
       <Link
