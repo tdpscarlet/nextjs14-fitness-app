@@ -21,6 +21,8 @@ Current features:
 
 Incoming features:
 - Exercise diary
+- Measurement log
 - Data visualize chart
 - Email verification
 - Forgot password
+- Settings
