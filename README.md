@@ -6,8 +6,8 @@ Tech Stack:
 - Typescript
 - NextJS
 - ReactJS
-- Prisma
 - MySQL
+- Prisma
 - MaterialUI
 - TailwindCSS
 - Redux Toolkit
