@@ -6,10 +6,11 @@ Tech Stack:
 - Typescript
 - NextJS
 - ReactJS
-- TailwindCSS
-- Redux Toolkit
 - Prisma
 - MySQL
+- MaterialUI
+- TailwindCSS
+- Redux Toolkit
 
 Current features:
 - Search exercise, food
