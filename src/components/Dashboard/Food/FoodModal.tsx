@@ -13,6 +13,7 @@ import {
 import { useState } from "react";
 import axios from "axios";
 import createFood from "@/app/actions/food/createFood";
+import rolling from "@/assets/svg/rolling-anim.svg";
 
 interface IProps {
   value: string;
@@ -27,6 +28,7 @@ const FoodModal = ({ flag, setFlag, value, meal }: IProps) => {
   const [query, setQuery] = useState<string>("");
   const [result, setResult] = useState<FoodResult | null>();
   const [loading, setLoading] = useState<boolean>(false);
+  const [wait, setWait] = useState<boolean>(false);
 
   const url = `https://api.calorieninjas.com/v1/nutrition?query=${query}`;
   const config = {
@@ -40,6 +42,7 @@ const FoodModal = ({ flag, setFlag, value, meal }: IProps) => {
     setOpen(false);
     setFlag(!flag);
     setResult(null);
+    setWait(false);
   };
 
   const closeAlert = (
@@ -66,6 +69,7 @@ const FoodModal = ({ flag, setFlag, value, meal }: IProps) => {
 
   const handleAdd = async () => {
     if (result?.items) {
+      setWait(true);
       for (const item of result.items) {
         await createFood(
           value,
@@ -136,20 +140,30 @@ const FoodModal = ({ flag, setFlag, value, meal }: IProps) => {
                       </TableRow>
                     ))
                   ) : (
-                    <span className="ml-5">loading...</span>
+                    <div className="flex justify-center my-2">
+                      <img className="w-8" src={rolling.src} />
+                    </div>
                   )}
                 </TableBody>
               </Table>
             </TableContainer>
             <div className="flex flex-row justify-end gap-3">
               <div
-                className="bg-[rgb(33,43,54)] text-white px-4 py-2 font-bold border-transparent rounded-md cursor-pointer"
+                className={
+                  !wait
+                    ? "bg-[rgb(33,43,54)] text-white px-4 py-2 font-bold border-transparent rounded-md cursor-pointer"
+                    : "pointer-events-none bg-[rgb(141,141,141)] text-white px-4 py-2 font-bold border-transparent rounded-md"
+                }
                 onClick={handleAdd}
               >
                 Add
               </div>
               <div
-                className="bg-[rgb(33,43,54)] text-white px-4 py-2 font-bold border-transparent rounded-md cursor-pointer"
+                className={
+                  !wait
+                    ? "bg-[rgb(33,43,54)] text-white px-4 py-2 font-bold border-transparent rounded-md cursor-pointer"
+                    : "pointer-events-none bg-[rgb(141,141,141)] text-white px-4 py-2 font-bold border-transparent rounded-md"
+                }
                 onClick={handleClose}
               >
                 Cancel

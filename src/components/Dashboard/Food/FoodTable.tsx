@@ -19,12 +19,8 @@ const FoodTable = ({ food, meal }: IProps) => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>
-              <span>Name</span>
-            </TableCell>
-            <TableCell>
-              <span>Serving size (g)</span>
-            </TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>Serving size (g)</TableCell>
             <TableCell>Calories (kcal)</TableCell>
             <TableCell>Carbs (g)</TableCell>
             <TableCell>Fat (g)</TableCell>
@@ -39,8 +35,8 @@ const FoodTable = ({ food, meal }: IProps) => {
               .filter((item) => {
                 return item.meal.includes(meal);
               })
-              .map((item) => (
-                <TableRow key={item.name}>
+              .map((item, index) => (
+                <TableRow key={index}>
                   <TableCell className="capitalize">{item.name}</TableCell>
                   <TableCell>{item.servingSize}</TableCell>
                   <TableCell>{item.calo}</TableCell>
